@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genus</title>
+    <link rel="stylesheet" href="style/geometry.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <div style="background-color: rgba(16, 144, 216, 0.10);"
+            class="flex justify-between me-8 ms-5 mt-5 rounded px-4 py-2 mb-8">
+            <div>
+                <h3 class="font-semibold text-4xl ">Interactive</h3>
+                <p class="text-2xl">Geometry Genius</p>
+            </div>
+            <a href="blog.html"><button class="text-2xl bg-green-500 h-[36px] w-[80px] mt-4 rounded ">Blog</button></a>
+        </div>
+
+    </header>
+    <main>
+        <div class="flex ms-5 me-5 gap-x-5 mb-5">
+            <div class="grid grid-cols-3 gap-x-4 gap-y-8">
+                <div
+                    style="width: 237px; height: 333px; border: 1px solid rgb(110, 110, 179); background-color: white; border-radius: 8px;">
+                    <img class="p-3" src="images/triangle.png" alt="">
+                    <p class="text-center">Triangle</p>
+                    <p class="text-center pb-2">Area (A) =0.5 x b x h</p>
+                    <input class="w-[75px] ms-2 me-2 pl-2 outline-none bg-green-100 rounded mb-3" type="text" name=""
+                        id="triangle-felid-1" placeholder="b">cm
+                    <input class="w-[75px] ms-2 me-2 pl-2 outline-none bg-green-100 rounded mb-3" type="text" name=""
+                        id="triangle-felid-2" placeholder="h">cm
+                    <button id="triangle-btn" class="block mx-auto bg-sky-400 px-2 py-1 rounded ">Calculator</button>
+                </div>
+                <div
+                    style="width: 237px; height: 333px; border: 1px solid rgb(110, 110, 179); background-color: white; border-radius: 8px;">
+                    <img class="p-3 mt-8" src="images/rectangle.png" alt="">
+                    <p class="text-center">Rectangle</p>
+                    <p class="text-center mb-3">Area(A) = w x l</p>
+                    <input class="ms-2 me-2 w-[75px] pl-2 outline-none bg-green-100 rounded mb-3" type="text" name=""
+                        id="Rectangle-field-1" placeholder="w">cm
+                    <input class="w-[75px] ms-2 me-2 pl-2 outline-none bg-green-100 rounded mb-3" type="text" name=""
+                        id="Rectangle-field-2" placeholder="l">cm
+                    <button id="Rectangle-btn" class="block mx-auto bg-sky-400 px-2 py-1 rounded">Calculation</button>
+                </div>
+                <div
+                    style="width: 237px; height: 333px; border: 1px solid rgb(110, 110, 179); background-color: white; border-radius: 8px;">
+                    <img class="p-3 mt-12" src="images/parallelogram.png" alt="">
+                    <p class="text-center">Parallelogram</p>
+                    <p class="text-center mb-3">Area(A) = b x h</p>
+                    <input class="w-[75px] ms-5 me-2 pl-2 outline-none bg-green-100 rounded mb-3" type="text" name=""
+                        id="Parallelogram-field-1" placeholder="b=10cm">
+                    <input class="w-[75px] ms-5 me-2 pl-2 outline-none bg-green-100 rounded mb-3" type="text" name=""
+                        id="Parallelogram-field-2" placeholder="h=12cm">
+                    <button id="Parallelogram-btn" class="block mx-auto bg-sky-400 px-2 py-1 rounded">Calculator</button>
+                </div>
+                <div
+                    style="width: 237px; height: 333px; border: 1px solid rgb(110, 110, 179); background-color: white; border-radius: 8px;">
+                    <img class="p-3" src="images/rhombus.png" alt="">
+                    <p class="text-center">Rhombus</p>
+                    <p class="text-center mb-3">0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                    <input class="w-[75px] ms-5 me-2 pl-2 outline-none bg-green-100 rounded mb-3" type="text" name=""
+                        id="Rhombus-field-1" placeholder="d1=16cm">
+                    <input class="w-[75px] ms-5 me-2 pl-2 outline-none bg-green-100 rounded mb-3" type="text" name=""
+                        id="Rhombus-field-2" placeholder="d2=8cm">
+                    <button id="Rhombus-btn" class="block mx-auto bg-sky-400 px-2 py-1 rounded">Calculation</button>
+                </div>
+                <div
+                    style="width: 237px; height: 333px; border: 1px solid rgb(110, 110, 179); background-color: white; border-radius: 8px;">
+                    <img class="p-3 h-[185px] px-8" src="images/pentagon.png" alt="">
+                    <p class="text-center">Pentagon</p>
+                    <p class="text-center mb-3">Area(A)=0.5 x p x b</p>
+                    <input class="w-[75px] ms-5 me-2 pl-2 outline-none bg-green-100 rounded mb-3" type="text" name=""
+                        id="Pentagon-field-1" placeholder="p=6cm">
+                    <input class=" w-[75px] ms-5 me-2 pl-2 outline-none bg-green-100 rounded mb-3" type="text" name=""
+                        id="Pentagon-field-2" placeholder="b=10cm">
+                    <button id="Pentagon-btn" class="block mx-auto bg-sky-400 px-2 py-1 rounded">Calculator</button>
+                </div>
+                <div
+                    style="width: 237px; height: 333px; border: 1px solid rgb(110, 110, 179); background-color: white; border-radius: 8px;">
+                    <img class="p-3 mt-8" src="images/ellipse.png" alt="">
+                    <p class="text-center">Ellipse</p>
+                    <p class="text-center mb-3">Area(A)=&pi;ab</p>
+                    <input class="w-[75px] ms-5 me-2 pl-2 outline-none bg-green-100 rounded mb-3" type="text" name=""
+                        id="Ellipse-field-1" placeholder="a=10cm">
+                    <input class="w-[75px] ms-5 me-2 pl-2 outline-none bg-green-100 rounded mb-3" type="text" name=""
+                        id="Ellipse-field-2" placeholder="b=4cm">
+                    <button id="Ellipse-btn" class="block mx-auto bg-sky-400 px-2 py-1 rounded">Calculation</button>
+                </div>
+            </div>
+            <div>
+                <p class="ms-8 mb-3 underline font-semibold">Area Calculation</p>
+                <div class="ms-8 ">
+                    <div class="flex gap-x-8 mb-3">
+                        <p>Triangle</p>
+                        <p id="triangle">00</p>
+                    </div>
+                    <div class="flex gap-x-8 mb-3">
+                        <p>Rectangle</p>
+                        <p id="Rectangle">00</p>
+                    </div>
+                    <div class="flex gap-x-5 mb-3">
+                        <p>Parallelogram</p>
+                        <p id="Parallelogram">00</p>
+                    </div>
+                    <div class="flex gap-x-8 mb-3">
+                        <p>Rhombus</p>
+                        <p id="Rhombus">00</p>
+                    </div>
+                    <div class="flex gap-x-8 mb-3">
+                        <p>Pentagon</p>
+                        <p id="Pentagon">00</p>
+                    </div>
+                    <div class="flex gap-x-8 mb-3">
+                        <p>Ellipse</p>
+                        <p id="Ellipse">00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/geometry.js"></script>
+</body>
+
+</html>
